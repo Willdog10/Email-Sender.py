@@ -9,6 +9,7 @@ with smtplib.SMTP('smtp.gmail.com', '587') as smtpserver:
     smtpserver.starttls()
     smtpserver.ehlo()
     smtpserver.login('#FromEmail','#PasswordforEmail')
+    #100 is the number of emails being sent
     for i in range (100):
         smtpserver.sendmail(fromaddrs, toaddrs, message)
         print(i) 
