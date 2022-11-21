@@ -1,0 +1,14 @@
+import smtplib
+
+toaddrs = '#ToEmail'
+fromaddrs = '#fromEmail'
+message = ''
+
+with smtplib.SMTP('smtp.gmail.com', '587') as smtpserver:
+    smtpserver.ehlo()
+    smtpserver.starttls()
+    smtpserver.ehlo()
+    smtpserver.login('#FromEmail','#PasswordforEmail')
+    for i in range (100):
+        smtpserver.sendmail(fromaddrs, toaddrs, message)
+        print(i) 
