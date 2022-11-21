@@ -2,7 +2,7 @@ import smtplib
 
 toaddrs = '#ToEmail'
 fromaddrs = '#fromEmail'
-message = ''
+message = '#TypedMessageToSend'
 
 with smtplib.SMTP('smtp.gmail.com', '587') as smtpserver:
     smtpserver.ehlo()
